@@ -7,7 +7,7 @@ Description: >
 
 Globals:
   Function:
-    Timeout: 3
+    Timeout: 5
   Api:
     BinaryMediaTypes:
       - "*~1*"
@@ -32,7 +32,7 @@ Resources:
       Layers:
         - !Ref OpencvLayer
       Runtime: python3.7
-      MemorySize: 128
+      MemorySize: 1024
       Events:
         AddFaces:
           Type: HttpApi
@@ -55,4 +55,4 @@ Resources:
 Outputs:
   AddFacesApi:
     Description: "API Gateway endpoint URL for Prod stage for Add Faces function"
-    Value: !Sub "https://${ApiResource}.execute-api.${AWS::Region}.amazonaws.com/faces/"
+    Value: !Sub "https://${ApiResource}.execute-api.${AWS::Region}.amazonaws.com/faces"
