@@ -31,7 +31,7 @@ Resources:
       Handler: app.lambda_handler
       Layers:
         - !Ref OpencvLayer
-      Runtime: python3.7
+      Runtime: python3.8
       MemorySize: 1024
       Events:
         AddFaces:
@@ -47,10 +47,10 @@ Resources:
       Description: OpenCV Dependencies
       ContentUri: ./opencv
       CompatibleRuntimes:
-        - python3.7
+        - python3.8
       RetentionPolicy: Delete
     Metadata:
-      BuildMethod: python3.7
+      BuildMethod: python3.8
 
 Outputs:
   AddFacesApi:
