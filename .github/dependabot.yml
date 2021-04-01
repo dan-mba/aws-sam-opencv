@@ -4,9 +4,13 @@ version: 2
 updates:
   - directory: "/opencv"
     package-ecosystem: "pip"
+    open-pull-requests-limit: 10
     schedule:
       interval: "weekly"
+      day: "tuesday"
   - directory: "/add_faces"
     package-ecosystem: "pip"
+    open-pull-requests-limit: 10
     schedule:
       interval: "weekly"
+      day: "tuesday"
